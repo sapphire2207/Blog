@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/utils.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
+    <link rel="stylesheet" href="/styles/newblog.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <title>iBlog - Heaven For Bloggers</title>
+  </head>
+  <body>
+    <nav class="navigation max-width-1 m-auto">
+      <div class="nav-left">
+        <a class="logo" href="/"><span>iBlog</span></a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/newblog">Create</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="max-width-1 m-auto">
+      <hr />
+    </div>
+
+    <div class="newblog-content max-width-2 m-auto my-2 font-1">
+      <h1 class="heading">Edit Post</h1>
+      <form action="/update/<%= article.id %>" method="POST">
+        <div class="form-box-newblog">
+            <input type="text" placeholder="Title" name="title" value="<%= article.title%>">
+        </div>
+        <div class="form-box-newblog">
+            <textarea name="content" id="" cols="30" rows="10" placeholder="Content" value=""><%= article.content%></textarea>
+        </div>
+        <div class="form-box-newblog">
+            <input type="text" placeholder="Author" name="author" value="<%=article.author%>" >
+        </div>
+        <div class="form-box-newblog">
+            <button class="btn article-btn-delete">Update Blog</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>Copyright &copy; iBlog.com</p>
+      <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+    </div>
+  </body>
+</html>

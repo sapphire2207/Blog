@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/utils.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
+    <link rel="stylesheet" href="/styles/newblog.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <title>iBlog - Heaven For Bloggers</title>
+  </head>
+  <body>
+    <nav class="navigation max-width-1 m-auto">
+      <div class="nav-left">
+        <a class="logo" href="/"><span >iBlog</span></a>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="max-width-1 m-auto">
+      <hr />
+    </div>
+
+    <div class="newblog-content max-width-2 m-auto my-2 font-1">
+      <h1 class="heading">New Post</h1>
+      <form action="/post" method="POST">
+        <div class="form-box-newblog">
+            <input name="title" type="text" placeholder="Title">
+        </div>
+        <div class="form-box-newblog">
+            <textarea name="content" id="" cols="30" rows="10" placeholder="Content"></textarea>
+        </div>
+        <div class="form-box-newblog">
+            <input name="author" value="" type="text" placeholder="Author">
+        </div>
+        <div class="form-box-newblog">
+            <a class="blogpage-link" href="/post"><button class="btn article-btn-delete">Create Blog</button></a>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>Copyright &copy; iBlog.com</p>
+      <a href="https://www.vecteezy.com/free-vector/typewriter"
+        >Vector Credits: Vecteezy</a
+      >
+    </div>
+  </body>
+</html>

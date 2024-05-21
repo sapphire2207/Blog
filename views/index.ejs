@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/utils.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <title>iBlog - Heaven For Bloggers</title>
+</head>
+<body>
+
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a class="logo" href="/"><span >iBlog</span></a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/newblog">Create</a></li>
+                <li><a href="/contact">Contact</a></li>     
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form id="searchForm" action="/search" method="GET">
+                <input class="form-input" type="text" name="title" id="searchTitle" placeholder="Article Search">
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+
+    <div class="content max-width-1 m-auto my-2">
+        <div class="content-left">
+            <h1 class="heading">The Heaven For Bloggers</h1>
+            <p>iBlog is a website which let's you submit articles which upon approval will be up on our website and you can get a good amount of reach from here.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati recusandae quasi blanditiis dolorum doloribus accusamus asperiores pariatur rerum ducimus fuga, incidunt reprehenderit et fugiat molestias eius debitis quod molestiae dolor.</p>
+        </div>
+        <div class="content-right">
+            <img src="/images/home.svg" alt="iBlog ">
+        </div>
+    </div>
+
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+
+    <div class="max-width-1 m-auto font-1 my-2">
+        <div class="articles-home">
+            <% if(locals.message) { %>
+                <h2><%= message %></h2>
+            <% }else { %>
+                <h2>Our Blogs</h2>
+            <% } %>
+                <a class="" href="/newblog"><button class="btn article-btn-post">New Post</button></a>
+                <% posts.forEach( post => { %>
+                    <div class="article-home">
+                        <a class="blogpage-link" href="/blogpost/<%= post.id %>"><h3 class="article-heading"><%=post.title%></h3></a>
+                        <p class="article-credentials"><%=post.date %></p>
+                        <p class="article-content"><%= post.content.length > 200 ? post.content.substring(0, 200) + '...' : post.content %></p>
+                        <p class="article-credentials">By: <%=post.author%></p>
+                        <a class="blogpage-link" href="/edit/<%= post.id %>"><button class="btn article-btn-edit">Edit</button></a>
+                        <a class="blogpage-link" href="/delete/<%= post.id %>">
+                            <button class="btn article-btn-delete">Delete</button>
+                        </a>
+                    </div>
+
+                    <div class="max-width-1 m-auto">
+                        <hr>
+                    </div>
+                <% }); %>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright &copy; iBlog.com</p>
+        <a href="https://www.vecteezy.com/free-vector/typewriter">Vector Credits: Vecteezy</a>
+    </div>
+
+</body>
+</html>

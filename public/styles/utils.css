@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --main-bg-color: purple;
+    --font1: "Poppins", sans-serif;
+    --font2: "Roboto", sans-serif;
+}
+
+.font-1{
+    font-family: var(--font1);
+}
+
+.max-width-1{
+    max-width: 80vw;
+}
+
+.max-width-2{
+    max-width: 65vw;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.my-2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form-input{
+    padding: 3px 5px;
+    font-size: 13px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 0 11px;
+    font-family: var(--font1);
+}
+
+.btn{
+    padding: 3px 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-family: var(--font1);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    color: white;
+    background: var(--main-bg-color);
+}

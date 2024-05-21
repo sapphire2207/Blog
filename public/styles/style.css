@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.navigation{
+    margin-top: 18px;
+    padding-bottom: 10px;
+    font-family: var(--font1);
+    /* height : 74px; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left{
+    font-size: 20px;
+    display: flex;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    margin: 0px 77px;
+    font-size: 22px;
+}
+
+.nav-left ul li{
+    list-style: none;
+    margin: 0px 14px;
+    
+}
+
+.nav-left ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left ul a:hover{
+    color: var(--main-bg-color);
+    font-weight:bold;
+}
+
+
+.content{
+    height: 100%;
+    background-color: rgb(208,208,243);
+    display: flex;
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+    border-radius: 15px;
+}
+
+/* .content::after{
+    content: "";
+    background-image: url("../images/11.svg");
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    opacity: 0.15;
+} */
+
+.content-left{
+    font-family: var(--font1);
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.heading{
+    padding-bottom: 17px;
+}
+
+.content-right{
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-right img{
+    height: 355px;
+    border: 2px solid black;
+    border-radius: 200px;
+}
+
+.articles-home{
+    background-color: rgb(208,208,243);
+    margin-top: 32px;
+    padding: 9px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.articles-home h2{
+    margin: 20px 20px;
+}
+
+.article-btn-post{
+    margin: 0px 20px;
+}
+
+.article-home{
+    margin: 14px 20px;
+}
+
+.article-btn-edit{
+    margin-top: 10px;
+}
+
+.article-btn-delete{
+    /* margin-left: 8px; */
+    margin-top: 10px;
+}
+
+.article-credentials{
+    color: rgb(123, 117, 117);
+    padding-top: 9px;
+}
+
+.article-content{
+    padding: 6px 0px;
+}
+
+.blogpage-link{
+    text-decoration: none;
+    color: black;
+}
+
+.footer{
+    height: 50px;
+    background-color: rgb(31, 4, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.footer a{
+    color: white;
+}
